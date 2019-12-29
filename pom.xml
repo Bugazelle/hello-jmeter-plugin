@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>hello.jmeter.plugin</groupId>
+    <artifactId>HelloJMterPlugin</artifactId>
+    <version>0.1.0</version>
+
+    <name>HelloJMterPlugin</name>
+    <description>A simple guide to develop pulgin for JMeter - 开发Jmeter插件的一个简单示例</description>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.build.outputEncoding>UTF-8</project.build.outputEncoding>
+        <jdk.version>1.7</jdk.version>
+    </properties>
+
+    <dependencies>
+
+        <!-- 
+        
+        JMeter依赖
+        需要注意：
+        1. version: 选择版本
+        2. scope: provided, 因为JMeter本身会提供这个jar包，不需要做导出, 更多内容请查看: https://howtodoinjava.com/maven/maven-dependency-scopes/
+        3. 所有JMeter jar 包: https://mvnrepository.com/artifact/org.apache.jmeter
+           如果想要查看jar包提供什么功能：
+           - 简单查看：jar tf xxx.jar
+           - 具体细节：
+             可以去这里查看：https://javadoc.io/doc/org.apache.jmeter
+             也可以这里下载javadoc, 重命名为zip包，解压，查看html文档: https://repo1.maven.org/maven2/org/apache/jmeter/
+             官方API文档：https://jmeter.apache.org/api/
+           
+           比如：
+           ApacheJMeter_core.jar: 所有核心的逻辑和机制
+           ApacheJMeter_java.jar: 所有核心相关的协议
+           ApacheJMeter_components.jar: 所有组建内容，比如断言, 前后置处理器，timer, 监视器等
+
+        JMeter Dependencies 
+        Please Note:
+        1. version: Choose a proper version based on your project
+        2. scope: provided, because JMeter itself could provid the jar, no need to export, for more info, please refer to: https://howtodoinjava.com/maven/maven-dependency-scopes/
+        3. All the JMeter jar files are here: https://mvnrepository.com/artifact/org.apache.jmeter
+           - Simply see what content in it: jar tf xxx.jar
+           - For more details:
+             For the java doc, more info here: https://javadoc.io/doc/org.apache.jmeter
+             Also, you could download the javadoc to local, rename jar to zip, and unzip: https://repo1.maven.org/maven2/org/apache/jmeter/
+             The official API document is: https://jmeter.apache.org/api/
+
+           For example:
+           ApacheJMeter_core.jar: All the core logic and mechanism
+           ApacheJMeter_java.jar: All the core protocal mechanism
+           ApacheJMeter_components.jar: All the component, such as assertion, pre/post processors, listener
+
+        -->
+
+        <dependency>
+            <groupId>org.apache.jmeter</groupId>
+            <artifactId>ApacheJMeter_core</artifactId>
+            <version>5.2.1</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.jmeter</groupId>
+            <artifactId>ApacheJMeter_java</artifactId>
+            <version>5.2.1</version>
+            <scope>provided</scope>
+        </dependency>
+
+    </dependencies>
+
+    <build>
+
+        <!--
+
+        resources: 告诉maven源代码在哪里
+
+        resources: Locate the source code 
+
+        -->
+
+        <resources>
+            <resource>
+                <directory>src/main/java</directory>
+                <includes>
+                    <include>**/*.properties</include>
+                </includes>
+            </resource>
+        </resources>
+
+        <!--
+
+        plugins: 
+        1. maven-compiler-plugin: 必备插件，编译源码，更多内容：https://maven.apache.org/plugins/maven-compiler-plugin/
+        2. maven-shade-plugin: 推荐插件，将所有的内容集成到一个jar包中，更多内容：https://maven.apache.org/plugins/maven-shade-plugin/
+
+        plugins: 
+        1. maven-compiler-plugin: Mandatory, complie the source, more info://maven.apache.org/plugins/maven-compiler-plugin/
+        2. maven-shade-plugin: Suggested, provides the capability to package the artifact in an uber-jar, more info://maven.apache.org/plugins/maven-shade-plugin/
+
+        -->
+
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.1</version>
+                <configuration>
+                    <source>${jdk.version}</source>
+                    <target>${jdk.version}</target>
+                    <optimize>true</optimize>
+                    <showDeprecation>true</showDeprecation>
+                    <showWarnings>true</showWarnings>
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-shade-plugin</artifactId>
+                <version>3.2.1</version>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>shade</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
