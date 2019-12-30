@@ -7,9 +7,6 @@ Here are the clear & brief sample to create custom JMeter plugin.
 
 The plugins here are very handy, something like: Hello World
 
-
-Contains:
-
 **1. Hello Configor:** A Config Element, and user could input hello words, and JMeter read the words, and save to parameter
 
 **2. Hello Function:** A custom function __hello to fulfil: Hello xxx, today is xxx
