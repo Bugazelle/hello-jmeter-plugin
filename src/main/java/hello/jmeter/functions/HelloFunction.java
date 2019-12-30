@@ -18,9 +18,9 @@ import java.util.Calendar;
 import java.util.Date;
 
 /**
- * 创建一个自定义函数__Hello, 实现: Hello xxx, today is xxx
+ * 创建一个自定义函数__hello, 实现: Hello xxx, today is xxx
  * 
- * Create a custom function __Hello to: Hello xxx, today is xxx
+ * Create a custom function __hello to: Hello xxx, today is xxx
  */
 public class HelloFunction extends AbstractFunction {
 
@@ -103,7 +103,7 @@ public class HelloFunction extends AbstractFunction {
      * 在 Function Helper 中显示每个参数的描述
      * 更多关于getArgumentDesc：https://jmeter.apache.org/api/org/apache/jmeter/functions/Function.html#getReferenceKey()
      * 
-     * Show the parameter descripton in Function Helper
+     * Show the parameter description in Function Helper
      * More info about the getArgumentDesc: https://jmeter.apache.org/api/org/apache/jmeter/functions/Function.html#getReferenceKey()
      */
     @Override

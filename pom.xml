@@ -28,10 +28,9 @@
         3. 所有JMeter jar 包: https://mvnrepository.com/artifact/org.apache.jmeter
            如果想要查看jar包提供什么功能：
            - 简单查看：jar tf xxx.jar
-           - 具体细节：
-             可以去这里查看：https://javadoc.io/doc/org.apache.jmeter
-             也可以这里下载javadoc, 重命名为zip包，解压，查看html文档: https://repo1.maven.org/maven2/org/apache/jmeter/
-             官方API文档：https://jmeter.apache.org/api/
+           - Java doc: https://javadoc.io/doc/org.apache.jmeter
+           - 下载javadoc, 重命名为zip包，解压，查看html文档: https://repo1.maven.org/maven2/org/apache/jmeter/
+           - 官方API文档：https://jmeter.apache.org/api/
            
            比如：
            ApacheJMeter_core.jar: 所有核心的逻辑和机制
@@ -41,13 +40,13 @@
         JMeter Dependencies 
         Please Note:
         1. version: Choose a proper version based on your project
-        2. scope: provided, because JMeter itself could provid the jar, no need to export, for more info, please refer to: https://howtodoinjava.com/maven/maven-dependency-scopes/
+        2. scope: provided, because JMeter itself could provide the jar, no need to export, for more info, please refer to: https://howtodoinjava.com/maven/maven-dependency-scopes/
         3. All the JMeter jar files are here: https://mvnrepository.com/artifact/org.apache.jmeter
+           If you confused about which jar provide which functions, check here:
            - Simply see what content in it: jar tf xxx.jar
-           - For more details:
-             For the java doc, more info here: https://javadoc.io/doc/org.apache.jmeter
-             Also, you could download the javadoc to local, rename jar to zip, and unzip: https://repo1.maven.org/maven2/org/apache/jmeter/
-             The official API document is: https://jmeter.apache.org/api/
+           - For java doc: https://javadoc.io/doc/org.apache.jmeter
+           - For download java doc (rename jar to zip, and unzip): https://repo1.maven.org/maven2/org/apache/jmeter/
+           - For official API documentation: https://jmeter.apache.org/api/
 
            For example:
            ApacheJMeter_core.jar: All the core logic and mechanism
@@ -98,8 +97,8 @@
         2. maven-shade-plugin: 推荐插件，将所有的内容集成到一个jar包中，更多内容：https://maven.apache.org/plugins/maven-shade-plugin/
 
         plugins: 
-        1. maven-compiler-plugin: Mandatory, complie the source, more info://maven.apache.org/plugins/maven-compiler-plugin/
-        2. maven-shade-plugin: Suggested, provides the capability to package the artifact in an uber-jar, more info://maven.apache.org/plugins/maven-shade-plugin/
+        1. maven-compiler-plugin: Mandatory, compile the source, more info: https://maven.apache.org/plugins/maven-compiler-plugin/
+        2. maven-shade-plugin: Suggested, provides the capability to package the artifact in an uber-jar, more info: https://maven.apache.org/plugins/maven-shade-plugin/
 
         -->
 

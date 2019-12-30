@@ -23,7 +23,7 @@ public class HelloConfigorBeanInfo extends BeanInfoSupport {
 
     PropertyDescriptor p = property(HELLOWORDS);
     p.setValue(NOT_UNDEFINED, Boolean.TRUE);
-    p.setValue(DEFAULT, "Hello JMeter Config");
+    p.setValue(DEFAULT, "Hello JMeter Plugin");
     p.setValue(NOT_EXPRESSION, Boolean.TRUE);
 
     p = property(VARIABLE_NAME);

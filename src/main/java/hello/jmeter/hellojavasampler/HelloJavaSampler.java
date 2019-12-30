@@ -71,7 +71,7 @@ public class HelloJavaSampler extends AbstractJavaSamplerClient {
   /**
    * 设置参数的默认值，如果为空，则填null
    * 
-   * Set the default values for paramters, if empty, please set null
+   * Set the default values for parameters, if empty, please set null
    */
   @Override
   public Arguments getDefaultParameters() {
@@ -83,7 +83,7 @@ public class HelloJavaSampler extends AbstractJavaSamplerClient {
   /**
    * 实现测试逻辑
    * 
-   * Fullfill the logic
+   * Fulfil the logic
    */
   @Override
   public SampleResult runTest(JavaSamplerContext context) {

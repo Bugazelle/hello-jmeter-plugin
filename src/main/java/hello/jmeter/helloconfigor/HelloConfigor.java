@@ -17,9 +17,11 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * 创建一个Config Element: Hello Config
- * 
- * Create a Config Element: Hello Config
+ * 创建一个Config Element: Hello Configor
+ * 用户可以输入文字，然后JMeter读取文字，并且保存到参数
+ *
+ * Create a Config Element: Hello Configor
+ *  User could input hello words, and JMeter read the words, and save to parameter
  */
 public class HelloConfigor extends ConfigTestElement implements TestBean, LoopIterationListener {
 
@@ -30,7 +32,7 @@ public class HelloConfigor extends ConfigTestElement implements TestBean, LoopIt
   private String variableName;
 
   // 生成新的JMeter迭代，并把数据传入JMeter
-  // Satr the new iteration, and pass the values to JMeter
+  // Start the new iteration, and pass the values to JMeter
   @Override
   public void iterationStart(LoopIterationEvent loopIterationEvent) {
     JMeterContextService.getContext().getVariables().put(getVariableName(), helloWords);
