@@ -7,6 +7,7 @@ Here are the clear & brief sample to create custom JMeter plugin.
 
 The plugins here are very handy, something like: Hello World
 
+
 Contains:
 
 **1. Hello Configor:** A Config Element, and user could input hello words, and JMeter read the words, and save to parameter
@@ -22,7 +23,7 @@ Contains:
 ## Guide
 
 - [How to Build](#how-to-build)
-- [pom.xml](#pom.xml)
+- [pom.xml](#pomxml)
 - [Hello Configor](#hello-configor)
 - [Hello Function](#hello-function)
 - [Hello Java Sampler](#hello-java-function)
@@ -121,7 +122,7 @@ A JMeter config element needs at least 3 parts:
 
 A custom function __Hello to fulfil: Hello xxx, today is xxx
 
-![](images/HelloConfigor.png)
+![](images/HelloFunction.png)
 
 1. Only one java file to make things ready: [HelloFunction.java](https://github.com/Bugazelle/hello-jmeter-plugin/blob/master/src/main/java/hello/jmeter/functions/HelloFunction.java)
 
@@ -195,7 +196,10 @@ Here are the things we need to know:
        
        - Should create "createDataPanel" to set GUI info, such as label for parameters
 
-At last, if you think this really do a help to you.
+
+## At Last
+
+if you think this really do a help to you.
 Please give the repo a STAR 🌟
 
 ![](images/Hello.gif)
