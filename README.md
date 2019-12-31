@@ -1,7 +1,7 @@
 Hello World, Hello JMeter Plugin
 ====================
 
-> 中文文档，请查看微信公众号：
+> 中文文档，请查看：[JMeter: 插件开发，看完这一篇，就可以入门了，绝对干货！！](https://mp.weixin.qq.com/s/aW-p4HxbqsyAcipZjygA6Q)
 
 Here are the clear & brief sample to create custom JMeter plugin.
 
@@ -35,6 +35,8 @@ mvn clean package
 ```
 
 > After test, the jar is compatible with JMeter 2.x, 3.x, 4.x, 5.x
+
+Once building success, copy the **HelloJMterPlugin-x.x.x.jar** to **\<JMeterHome\>/lib/ext**
 
 ## pom.xml
 
